@@ -137,10 +137,11 @@ img {
   margin: 0px 40px 0px 0px;
 }
 
-.contact-links:hover,
-.contact-links:focus {
+.contact-links:hover + .icon-envelope + .icon-smartphone,
+.contact-links:focus + .icon-envelope + .icon-smartphone {
   color: var(--link-hover-color);
-  transition: color var(--transition);
+  fill: var(--link-hover-color);
+  transition: color var(--transition), fill var(--transition);
 }
 .icon {
   display: inline-block;
@@ -149,11 +150,13 @@ img {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  fill: currentColor;
 }
 .icons-list .icon-smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  fill: currentColor;
 }
 
 /*.....HERO section....*/
@@ -199,6 +202,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 19px 10px 20px;
   margin-top: 30px;
+  border: none;
 }
 .hero-button:hover,
 .hero-button:focus,
@@ -643,11 +647,10 @@ img {
   background-color: #ffffff;
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 0;
   border-radius: 50%;
-  outline: 0;
+  outline: none;
   border: none;
   margin-top: 8px;
   margin-right: 8px;
@@ -657,13 +660,15 @@ img {
   right: 8px;
   width: 30px;
   height: 30px;
-  outline: 0;
+  outline: none;
   border: none;
 }
 .icon-modal-close:hover,
 .icon-modal-close:focus {
   stroke: #2196f3;
   fill: #fff;
+  outline: none;
+  transition: fill var(--transition) . stroke var(--transition);
 }
 /* Stiluri Formular*/
 .form {
@@ -711,6 +716,7 @@ img {
 .data-form-input:focus {
   border-color: var(--button-active-color);
   fill: var(--button-active-color);
+  outline: none;
 }
 .data-form-input:focus ~ .form-icons,
 .data-form-input:hover ~ .form-icons {
@@ -742,6 +748,8 @@ img {
 .textarea:focus,
 .textarea:hover {
   border-color: var(--button-active-color);
+  outline: none;
+  transition: border-color var(--transition);
 }
 .form-checkbox {
   display: inline-block;
@@ -786,6 +794,7 @@ img {
 .agree-check .checkmark:focus + .checkbox-icon,
 .agree-check .checkmark:checked:focus + .checkbox-icon {
   outline: 2px solid #212121;
+  cursor: pointer;
 }
 
 .agree-check .checkmark:checked + .checkbox-icon {
@@ -831,12 +840,14 @@ img {
   background: var(--button-active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 .btn-submit:hover,
 .btn-submit:focus {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: background var(--transition);
 }
 .subscribe-form {
 }
@@ -892,6 +903,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  border: none;
 }
 .subscribe-button:hover,
 .subscribe-button:focus {
